@@ -9,7 +9,7 @@ volumes:
   opdata:
 
 x-op-restart-policy: &restart_policy
-  restart: unless-stopped
+  restart: always
 x-op-image: &image
   image: openproject/community:${TAG:-12}
 x-op-app: &app
