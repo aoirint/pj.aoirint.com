@@ -80,13 +80,6 @@ services:
       retries: 3
       start_period: 30s
 
-  autoheal:
-    image: willfarrell/autoheal:1.2.0
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-    environment:
-      AUTOHEAL_CONTAINER_LABEL: autoheal
-
   worker:
     <<: *app
     command: "./docker/prod/worker"
