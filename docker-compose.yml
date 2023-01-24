@@ -26,6 +26,7 @@ x-op-app: &app
     RAILS_MAX_THREADS: ${RAILS_MAX_THREADS:-16}
     # set to true to enable the email receiving feature. See ./docker/cron for more options
     IMAP_ENABLED: "${IMAP_ENABLED:-false}"
+    USE_PUMA: "${USE_PUMA:-false}"
   volumes:
     - "${OPDATA:-opdata}:/var/openproject/assets"
 
