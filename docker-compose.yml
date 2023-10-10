@@ -1,4 +1,4 @@
-# Based on https://github.com/opf/openproject-deploy/blob/1c0351604a0cf1d06280dbad6819f0b800d0b0e8/compose/docker-compose.yml
+# Based on https://github.com/opf/openproject-deploy/blob/fcd6d94361a27048bdcb9b6181f07762279394c8/compose/docker-compose.yml
 
 networks:
   frontend:
