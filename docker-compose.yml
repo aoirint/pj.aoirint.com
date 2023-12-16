@@ -52,8 +52,6 @@ services:
   proxy:
     <<: [*image, *restart_policy]
     command: "./docker/prod/proxy"
-    ports:
-      - "${PORT:-8080}:80"
     environment:
       APP_HOST: web
       OPENPROJECT_RAILS__RELATIVE__URL__ROOT: "${OPENPROJECT_RAILS__RELATIVE__URL__ROOT:-}"
@@ -113,6 +111,8 @@ services:
       - proxy
     networks:
       - frontend
+    ports:
+      - "${PORT:-8080}:80"
     volumes:
       - ./nginx_templates:/etc/nginx/templates
       - ${NGINX_LOG_DIR:?}:/logs
